@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # lumina-studio
 =======
 # Welcome to your Lovable project
@@ -74,3 +75,6 @@ To connect a domain, navigate to Project > Settings > Domains and click Connect 
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
 
+=======
+# PhotoFlow
+>>>>>>> 481cc3d88dd9ac151af640a522e80a6dbe37ef25
