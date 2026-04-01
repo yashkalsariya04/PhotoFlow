@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# API Test Script for FaceMatrix Backend
+# API Test Script for PhotoFlow Backend
 
-BASE_URL="https://facematrix.sonomainfotech.in/api"
+BASE_URL="https://PhotoFlow.sonomainfotech.in/api"
 TOKEN=""
 
-echo "🧪 FaceMatrix API Test Suite"
+echo "🧪 PhotoFlow API Test Suite"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 

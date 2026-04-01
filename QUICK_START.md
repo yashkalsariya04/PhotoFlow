@@ -1,6 +1,6 @@
 # 🚀 Quick Start Guide
 
-Get FaceMatrix running in 5 minutes!
+Get PhotoFlow running in 5 minutes!
 
 ## Prerequisites
 
@@ -66,11 +66,11 @@ cp .env.example .env
 bun run dev
 ```
 
-Frontend will start on **https://facematrix.sonomainfotech.in**
+Frontend will start on **https://PhotoFlow.sonomainfotech.in**
 
 ## Step 4: Create Your First Account
 
-1. Open **https://facematrix.sonomainfotech.in** in your browser
+1. Open **https://PhotoFlow.sonomainfotech.in** in your browser
 2. Click **"Get Started"** or navigate to `/signup`
 3. Fill in:
    - Name: `Test Photographer`
@@ -102,7 +102,7 @@ You'll be automatically logged in!
 
 1. Copy the access code from your event
 2. Open a **private/incognito browser window** (or just a new tab)
-3. Navigate to **https://facematrix.sonomainfotech.in/client**
+3. Navigate to **https://PhotoFlow.sonomainfotech.in/client**
 4. Enter the access code
 5. Upload a selfie (any photo with a face will work for testing)
 6. Enter your name and click **"Find My Photos"**
@@ -215,9 +215,9 @@ MAX_FILE_SIZE=10485760  # 10MB
 ### Frontend (.env)
 
 ```bash
-VITE_API_URL=https://facematrix.sonomainfotech.in/api
-VITE_APP_NAME=FaceMatrix
-VITE_APP_URL=https://facematrix.sonomainfotech.in
+VITE_API_URL=https://PhotoFlow.sonomainfotech.in/api
+VITE_APP_NAME=PhotoFlow
+VITE_APP_URL=https://PhotoFlow.sonomainfotech.in
 ```
 
 ## Default Test Data
@@ -235,17 +235,17 @@ You can test API endpoints with curl:
 
 ```bash
 # Register
-curl -X POST https://facematrix.sonomainfotech.in/api/auth/register \
+curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"name":"Test","email":"test@example.com","password":"password123"}'
 
 # Login
-curl -X POST https://facematrix.sonomainfotech.in/api/auth/login \
+curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{"email":"test@example.com","password":"password123"}'
 
 # Create event (replace TOKEN)
-curl -X POST https://facematrix.sonomainfotech.in/api/events \
+curl -X POST https://PhotoFlow.sonomainfotech.in/api/events \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d '{"title":"Test Event","eventDate":"2024-12-25T00:00:00.000Z"}'

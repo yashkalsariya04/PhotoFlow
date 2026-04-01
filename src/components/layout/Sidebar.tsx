@@ -92,7 +92,7 @@ const Sidebar = ({ collapsed, onToggle }: SidebarProps) => {
               exit={{ opacity: 0 }}
               className="text-lg font-bold text-sidebar-foreground"
             >
-              FaceMatrix
+              PhotoFlow
             </motion.span>
           )}
         </Link>

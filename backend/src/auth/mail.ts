@@ -32,9 +32,9 @@ export class MailHelper {
       await transporter.sendMail({
         from,
         to: email,
-        subject: 'Your FaceMatrix account password',
+        subject: 'Your PhotoFlow account password',
         text: [
-          'Your FaceMatrix account has been created.',
+          'Your PhotoFlow account has been created.',
           '',
           `Email: ${email}`,
           `Password: ${password}`,
@@ -76,9 +76,9 @@ export class MailHelper {
       await transporter.sendMail({
         from,
         to: email,
-        subject: 'Your FaceMatrix password has been reset',
+        subject: 'Your PhotoFlow password has been reset',
         text: [
-          'Your FaceMatrix account password has been updated.',
+          'Your PhotoFlow account password has been updated.',
           '',
           `Email: ${email}`,
           `New Password: ${password}`,
@@ -120,11 +120,11 @@ export class MailHelper {
       await transporter.sendMail({
         from,
         to: email,
-        subject: 'Welcome to FaceMatrix',
+        subject: 'Welcome to PhotoFlow',
         text: [
           `Hi ${name || 'there'},`,
           '',
-          'Your FaceMatrix account has been created successfully.',
+          'Your PhotoFlow account has been created successfully.',
           '',
           `Email: ${email}`,
           '',

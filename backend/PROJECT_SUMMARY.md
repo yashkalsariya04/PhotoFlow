@@ -1,4 +1,4 @@
-# 🎉 FaceMatrix Backend - Project Summary
+# 🎉 PhotoFlow Backend - Project Summary
 
 ## ✅ Completed Features
 

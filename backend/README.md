@@ -1,4 +1,4 @@
-# FaceMatrix Backend
+# PhotoFlow Backend
 
 A **local-first AI-powered photography platform** backend built with NestJS, MongoDB, and TypeScript. This backend enables photographers to upload, organize, and share high-resolution photos with AI-powered tagging and smart album features.
 
@@ -159,7 +159,7 @@ MAX_FILE_SIZE=52428800
 
 ## 📡 API Documentation
 
-Base URL: `https://facematrix.sonomainfotech.in/api`
+Base URL: `https://PhotoFlow.sonomainfotech.in/api`
 
 ### Authentication
 
@@ -471,14 +471,14 @@ Authorization: Bearer <token>
 
 **Register a user:**
 ```bash
-curl -X POST https://facematrix.sonomainfotech.in/api/auth/register \
+curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"name":"Test User","email":"test@example.com","password":"password123"}'
 ```
 
 **Upload a photo:**
 ```bash
-curl -X POST https://facematrix.sonomainfotech.in/api/photos/upload \
+curl -X POST https://PhotoFlow.sonomainfotech.in/api/photos/upload \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -F "file=@/path/to/photo.jpg"
 ```

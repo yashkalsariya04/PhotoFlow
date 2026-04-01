@@ -1,4 +1,4 @@
-# ✅ FaceMatrix Backend - Completion Checklist
+# ✅ PhotoFlow Backend - Completion Checklist
 
 ## Project Deliverables
 

@@ -21,7 +21,7 @@ const Testimonials = () => {
             Loved by <span className="gradient-text">photographers</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Join thousands of professionals who trust FaceMatrix with their work
+            Join thousands of professionals who trust PhotoFlow with their work
           </p>
         </motion.div>
 

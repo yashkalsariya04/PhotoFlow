@@ -7,7 +7,7 @@ async function setupTestData() {
   
   try {
     // Create a test event via API
-    const response = await fetch('https://facematrix.sonomainfotech.in/api/auth/login', {
+    const response = await fetch('https://PhotoFlow.sonomainfotech.in/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -25,7 +25,7 @@ async function setupTestData() {
     console.log('✅ Logged in successfully');
     
     // Create test event
-    const eventResponse = await fetch('https://facematrix.sonomainfotech.in/api/events', {
+    const eventResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

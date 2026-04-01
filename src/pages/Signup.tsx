@@ -88,7 +88,7 @@ const Signup = () => {
       const user = await login(response.token);
       toast({
         title: "Success!",
-        description: `Welcome to FaceMatrix, ${user?.name || name}!`,
+        description: `Welcome to PhotoFlow, ${user?.name || name}!`,
       });
 
       navigate('/dashboard');
@@ -149,7 +149,7 @@ const Signup = () => {
       
       toast({
         title: 'Success!',
-        description: 'Account created successfully. Welcome to FaceMatrix!',
+        description: 'Account created successfully. Welcome to PhotoFlow!',
       });
 
       // Redirect to dashboard after successful signup
@@ -214,7 +214,7 @@ const Signup = () => {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <Camera className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold">FaceMatrix</span>
+            <span className="text-xl font-bold">PhotoFlow</span>
           </Link>
 
           {/* Header */}

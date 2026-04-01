@@ -1,4 +1,4 @@
-// Mock data for FaceMatrix AI - Simulated photography platform data
+// Mock data for PhotoFlow AI - Simulated photography platform data
 
 export const samplePhotos = [
   {
@@ -198,7 +198,7 @@ export const testimonials = [
     name: 'Jessica Reynolds',
     role: 'Wedding Photographer',
     avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100',
-    quote: 'FaceMatrix has transformed how I organize my wedding shoots. The AI tagging saves me hours of work after every event.',
+    quote: 'PhotoFlow has transformed how I organize my wedding shoots. The AI tagging saves me hours of work after every event.',
     rating: 5,
   },
   {

@@ -29,7 +29,7 @@ async function testAPI() {
     // Test 2: Call the API endpoint
     console.log(`\n🌐 Testing: GET /events/client/${accessId}`);
     
-    const response = await fetch(`https://facematrix.sonomainfotech.in/api/events/client/${accessId}`);
+    const response = await fetch(`https://PhotoFlow.sonomainfotech.in/api/events/client/${accessId}`);
     
     console.log(`📊 Status: ${response.status}`);
     
@@ -44,8 +44,8 @@ async function testAPI() {
           console.log(`\nPhoto ${i + 1}:`);
           console.log(`  🆔 ID: ${photo._id}`);
           console.log(`  📁 Filename: ${photo.filename}`);
-          console.log(`  🔗 Photo URL: https://facematrix.sonomainfotech.in/api/photos/${photo._id}`);
-          console.log(`  🖼️ Thumbnail: https://facematrix.sonomainfotech.in/api/photos/${photo._id}/thumbnail`);
+          console.log(`  🔗 Photo URL: https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}`);
+          console.log(`  🖼️ Thumbnail: https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}/thumbnail`);
         });
       }
     } else {

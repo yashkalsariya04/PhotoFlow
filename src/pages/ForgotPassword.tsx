@@ -76,7 +76,7 @@ const ForgotPassword = () => {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <Camera className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold">FaceMatrix</span>
+            <span className="text-xl font-bold">PhotoFlow</span>
           </Link>
 
           <div className="mb-8">

@@ -47,7 +47,7 @@ AWS_SECRET_ACCESS_KEY=...
 **Frontend (.env.production)**
 ```env
 VITE_API_URL=https://api.yourdomain.com/api
-VITE_APP_NAME=FaceMatrix
+VITE_APP_NAME=PhotoFlow
 VITE_APP_URL=https://yourdomain.com
 ```
 

@@ -65,7 +65,7 @@ async function bootstrap() {
   await app.listen(port, '127.0.0.1');
 
   console.log('');
-  console.log('🚀 FaceMatrix Backend');
+  console.log('🚀 PhotoFlow Backend');
   console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
   console.log(`✅ Server running on http://localhost:${port}`);
   console.log(`✅ API available at http://localhost:${port}/api`);

@@ -1,10 +1,10 @@
-# FaceMatrix - Event Photo Delivery Platform
+# PhotoFlow - Event Photo Delivery Platform
 
 A modern, AI-powered photography platform that helps photographers deliver event photos to clients using facial recognition technology.
 
 ## 🌟 Overview
 
-FaceMatrix transforms how photographers share event photos with clients. Upload photos from any event (weddings, corporate events, parties), and clients can instantly find their photos by uploading a selfie. Our AI-powered facial recognition matches faces across all event photos automatically.
+PhotoFlow transforms how photographers share event photos with clients. Upload photos from any event (weddings, corporate events, parties), and clients can instantly find their photos by uploading a selfie. Our AI-powered facial recognition matches faces across all event photos automatically.
 
 ### Key Features
 
@@ -106,9 +106,9 @@ bun install
 
 Frontend (.env):
 ```env
-VITE_API_URL=https://facematrix.sonomainfotech.in/api
-VITE_APP_NAME=FaceMatrix
-VITE_APP_URL=https://facematrix.sonomainfotech.in
+VITE_API_URL=https://PhotoFlow.sonomainfotech.in/api
+VITE_APP_NAME=PhotoFlow
+VITE_APP_URL=https://PhotoFlow.sonomainfotech.in
 ```
 
 Backend (backend/.env):
@@ -145,7 +145,7 @@ bun run start:dev
 bun run dev
 ```
 
-Visit https://facematrix.sonomainfotech.in for the frontend and https://facematrix.sonomainfotech.in/api for the backend.
+Visit https://PhotoFlow.sonomainfotech.in for the frontend and https://PhotoFlow.sonomainfotech.in/api for the backend.
 
 ## 📖 User Workflows
 

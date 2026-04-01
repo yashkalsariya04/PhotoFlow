@@ -19,7 +19,7 @@ const Showcase = () => {
             Stunning <span className="gradient-text">galleries</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See how photographers showcase their work with FaceMatrix
+            See how photographers showcase their work with PhotoFlow
           </p>
         </motion.div>
 

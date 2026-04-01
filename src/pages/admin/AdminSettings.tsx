@@ -50,7 +50,7 @@ export default function AdminSettings() {
               <CardContent className="space-y-4">
                 <div className="grid gap-2">
                   <Label htmlFor="site-name">Site Name</Label>
-                  <Input id="site-name" defaultValue="FaceMatrix" className="bg-slate-950 border-slate-700 text-slate-200" />
+                  <Input id="site-name" defaultValue="PhotoFlow" className="bg-slate-950 border-slate-700 text-slate-200" />
                 </div>
                 <div className="grid gap-2">
                   <Label htmlFor="support-email">Support Email</Label>

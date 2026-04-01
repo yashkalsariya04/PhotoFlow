@@ -1,13 +1,13 @@
 @echo off
-REM API Test Script for FaceMatrix Backend (Windows)
+REM API Test Script for PhotoFlow Backend (Windows)
 
 setlocal enabledelayedexpansion
 
-set BASE_URL=https://facematrix.sonomainfotech.in/api
+set BASE_URL=https://PhotoFlow.sonomainfotech.in/api
 set TOKEN=
 
 echo ================================================
-echo   FaceMatrix API Test Suite
+echo   PhotoFlow API Test Suite
 echo ================================================
 echo.
 

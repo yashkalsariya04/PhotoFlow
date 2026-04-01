@@ -6,7 +6,7 @@ async function uploadPhotos() {
   
   try {
     // Login
-    const loginResponse = await fetch('https://facematrix.sonomainfotech.in/api/auth/login', {
+    const loginResponse = await fetch('https://photoflow.sonomainfotech.in/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -44,7 +44,7 @@ async function uploadPhotos() {
       
       console.log(`📤 Uploading ${filename}...`);
       
-      const uploadResponse = await fetch('https://facematrix.sonomainfotech.in/api/photos/upload', {
+      const uploadResponse = await fetch('https://photoflow.sonomainfotech.in/api/photos/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -63,7 +63,7 @@ async function uploadPhotos() {
     
     console.log('\n🎉 Upload complete!');
     console.log(`📱 Access Code: ${accessCode}`);
-    console.log(`🔗 Test URL: https://facematrix.sonomainfotech.in/client/access/${accessCode}`);
+    console.log(`🔗 Test URL: https://photoflow.sonomainfotech.in/client/access/${accessCode}`);
     
   } catch (error) {
     console.error('❌ Error:', error.message);

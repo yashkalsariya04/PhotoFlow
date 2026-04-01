@@ -91,7 +91,7 @@ const Login = () => {
       const user = await login(response.token);
       toast({
         title: "Success!",
-        description: `Welcome to FaceMatrix, ${user?.name || name}!`,
+        description: `Welcome to PhotoFlow, ${user?.name || name}!`,
       });
 
       if (user?.role === 'admin') navigate('/admin');
@@ -123,7 +123,7 @@ const Login = () => {
       
       toast({
         title: 'Success!',
-        description: 'Welcome back to FaceMatrix!',
+        description: 'Welcome back to PhotoFlow!',
       });
 
       // Redirect based on role
@@ -160,7 +160,7 @@ const Login = () => {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <Camera className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold">FaceMatrix</span>
+            <span className="text-xl font-bold">PhotoFlow</span>
           </Link>
 
           {/* Header */}

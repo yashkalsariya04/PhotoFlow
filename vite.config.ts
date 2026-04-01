@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 7114,
     proxy: {
       '/api': {
-        target: 'https://facematrix.sonomainfotech.in',
+        target: 'https://PhotoFlow.sonomainfotech.in',
         changeOrigin: true,
         secure: false,
       },

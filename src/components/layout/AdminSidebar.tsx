@@ -62,7 +62,7 @@ const AdminSidebar = ({ collapsed, onToggle }: AdminSidebarProps) => {
               exit={{ opacity: 0 }}
               className="flex flex-col"
             >
-              <span className="text-lg font-bold text-slate-50 tracking-tight">FaceMatrix</span>
+              <span className="text-lg font-bold text-slate-50 tracking-tight">PhotoFlow</span>
               <span className="text-[11px] font-medium text-emerald-400 uppercase tracking-[0.18em]">Admin Panel</span>
             </motion.div>
           )}

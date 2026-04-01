@@ -30,7 +30,7 @@ async function testClientPhotos() {
     console.log(`🆔 Using client access ID: ${accessId}`);
     
     // Test the client photos endpoint
-    const response = await fetch(`https://facematrix.sonomainfotech.in/api/events/client-photos/${accessId}`);
+    const response = await fetch(`https://PhotoFlow.sonomainfotech.in/api/events/client-photos/${accessId}`);
     
     if (response.ok) {
       const result = await response.json();
@@ -43,8 +43,8 @@ async function testClientPhotos() {
           console.log(`\nPhoto ${i + 1}:`);
           console.log(`  📁 ID: ${photo._id}`);
           console.log(`  📂 Filename: ${photo.filename}`);
-          console.log(`  🔗 URL: https://facematrix.sonomainfotech.in/api/photos/${photo._id}`);
-          console.log(`  🖼️ Thumbnail: https://facematrix.sonomainfotech.in/api/photos/${photo._id}/thumbnail`);
+          console.log(`  🔗 URL: https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}`);
+          console.log(`  🖼️ Thumbnail: https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}/thumbnail`);
         });
       }
     } else {
