@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel-Based Face Recognition Test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.3);
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        .upload-area:hover {
+            border-color: rgba(255, 255, 255, 0.6);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .upload-area.dragover {
+            border-color: #4CAF50;
+            background: rgba(76, 175, 80, 0.1);
+        }
+        input[type="file"] {
+            display: none;
+        }
+        .upload-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+            transition: all 0.3s ease;
+        }
+        .upload-btn:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+        }
+        .preview {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .results {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        .similarity-score {
+            background: linear-gradient(90deg, #4CAF50, #8BC34A);
+            padding: 5px 10px;
+            border-radius: 15px;
+            display: inline-block;
+            margin: 5px;
+            font-weight: bold;
+        }
+        .feature-box {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .access-code {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-family: monospace;
+            font-size: 18px;
+            text-align: center;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Pixel-Based Face Recognition Test</h1>
+        <p>Test the enhanced face recognition system that uses both face detection AND pixel similarity matching!</p>
+        
+        <div class="access-code">
+            <strong>Test Event Access Code:</strong> HSVNL75B
+        </div>
+
+        <div class="feature-box">
+            <h3>🎯 What This Tests:</h3>
+            <ul>
+                <li>✅ Face Recognition (detects and matches faces)</li>
+                <li>🎨 Pixel Similarity (compares colors, edges, patterns)</li>
+                <li>🤖 Combined Matching (uses both methods for better results)</li>
+                <li>📊 Similarity Scoring (shows how similar photos are)</li>
+            </ul>
+        </div>
+
+        <div class="upload-area" id="uploadArea">
+            <h3>📸 Upload Your Selfie</h3>
+            <p>Drag & drop your photo here or click to browse</p>
+            <input type="file" id="fileInput" accept="image/*" capture="user">
+            <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
+                Choose Photo
+            </button>
+            <div id="preview"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>🔬 How Pixel Matching Works:</h3>
+            <p><strong>Color Histogram:</strong> Analyzes the distribution of colors in your photo</p>
+            <p><strong>Edge Detection:</strong> Compares shapes and outlines</p>
+            <p><strong>Dominant Colors:</strong> Matches photos with similar color palettes</p>
+            <p><strong>Combined Score:</strong> Weighted average of all features (70% threshold)</p>
+        </div>
+
+        <div id="results" class="results" style="display: none;">
+            <h3>📊 Matching Results</h3>
+            <div id="resultsContent"></div>
+        </div>
+
+        <div class="feature-box">
+            <h3>🚀 To Test Live:</h3>
+            <ol>
+                <li>Go to: <a href="https://facematrix.sonomainfotech.in/client/access/HSVNL75B" style="color: #4CAF50;">https://facematrix.sonomainfotech.in/client/access/HSVNL75B</a></li>
+                <li>Upload your selfie</li>
+                <li>System will find photos using both face AND pixel matching</li>
+                <li>Check results for similarity scores!</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const preview = document.getElementById('preview');
+        const results = document.getElementById('results');
+        const resultsContent = document.getElementById('resultsContent');
+
+        // Drag and drop functionality
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        function handleFile(file) {
+            if (!file.type.startsWith('image/')) {
+                alert('Please upload an image file');
+                return;
+            }
+
+            // Show preview
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.innerHTML = `<img src="${e.target.result}" class="preview" alt="Preview">`;
+                testPixelMatching(file);
+            };
+            reader.readAsDataURL(file);
+        }
+
+        async function testPixelMatching(file) {
+            results.style.display = 'block';
+            resultsContent.innerHTML = '<p>🔄 Analyzing image pixels and features...</p>';
+
+            try {
+                const formData = new FormData();
+                formData.append('selfie', file);
+                formData.append('clientName', 'Pixel Test User');
+                formData.append('clientEmail', 'pixel@test.com');
+
+                const response = await fetch('https://facematrix.sonomainfotech.in/api/events/access/HSVNL75B/recognize', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    displayResults(result);
+                } else {
+                    const error = await response.text();
+                    resultsContent.innerHTML = `<p style="color: #ff6b6b;">❌ Error: ${error}</p>`;
+                }
+            } catch (error) {
+                resultsContent.innerHTML = `<p style="color: #ff6b6b;">❌ Network Error: ${error.message}</p>`;
+            }
+        }
+
+        function displayResults(result) {
+            let html = `
+                <div class="feature-box">
+                    <h4>✅ Matching Complete!</h4>
+                    <p><strong>Total Photos Found:</strong> ${result.matchedPhotoCount}</p>
+                    <p><strong>Face Matches:</strong> ${result.faceMatches || 0}</p>
+                    <p><strong>Pixel Matches:</strong> ${result.pixelMatches || 0}</p>
+                </div>
+            `;
+
+            if (result.pixelSimilarity && result.pixelSimilarity.length > 0) {
+                html += '<div class="feature-box"><h4>🎨 Pixel Similarity Scores:</h4>';
+                result.pixelSimilarity.forEach((photo, index) => {
+                    const percentage = (photo.similarity * 100).toFixed(1);
+                    html += `<span class="similarity-score">Photo ${index + 1}: ${percentage}%</span>`;
+                });
+                html += '</div>';
+            }
+
+            html += `
+                <div class="feature-box">
+                    <h4>🔗 View Your Photos:</h4>
+                    <p><a href="https://facematrix.sonomainfotech.in/client/photos/${result.clientAccess._id}" target="_blank" style="color: #4CAF50;">
+                        Click here to see your matched photos →
+                    </a></p>
+                </div>
+            `;
+
+            resultsContent.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
