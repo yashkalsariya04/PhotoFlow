@@ -16,7 +16,7 @@ export class SeedService implements OnApplicationBootstrap {
   }
 
   async seedAdmin() {
-    const adminEmail = 'pateldev71103@gmail.com';
+    const adminEmail = 'yashkalsaria040@gmail.com';
     
     try {
       const existingUser = await this.userModel.findOne({ email: adminEmail });

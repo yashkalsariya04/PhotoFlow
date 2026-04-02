@@ -4,7 +4,7 @@ const FormData = require('form-data');
 const fs = require('fs');
 
 const API_URL = 'http://localhost:3001/api';
-const EMAIL = 'pateldev71103@gmail.com';
+const EMAIL = 'yashkalsaria040@gmail.com';
 const PASSWORD = 'password';
 
 async function run() {

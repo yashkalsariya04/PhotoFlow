@@ -31,7 +31,7 @@ async function seedAdmin() {
     await mongoose.connect(mongoUri);
     console.log('✅ Connected to MongoDB');
 
-    const adminEmail = 'pateldev71103@gmail.com';
+    const adminEmail = 'yashkalsaria040@gmail.com';
     const adminPassword = 'password'; // In production, use a secure password
     const adminName = 'Admin User';
 
