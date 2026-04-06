@@ -147,42 +147,52 @@ export const FaceLoginModal: React.FC<FaceLoginModalProps> = ({ isOpen, onClose 
       setModelsLoaded(true);
     } catch (err) {
       console.error('Failed to load faceapi models', err);
+      // Allow capture without face detection if models fail to load
+      setModelsLoaded(false);
+      setIsFaceCentered(true); // Allow capture immediately
     }
   };
 
   const startDetection = () => {
-    if (!videoRef.current || !modelsLoaded) return;
+    if (!videoRef.current) return;
     const detect = async () => {
       if (!videoRef.current || !stream) {
         setIsFaceCentered(false);
         return;
       }
       try {
-        // Try TinyFaceDetector first (fast), then fall back to SSD Mobilenet (more accurate)
-        let detection = await faceapi.detectSingleFace(
-          videoRef.current,
-          new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.4 })
-        );
-        if (!detection) {
-          detection = await faceapi.detectSingleFace(
+        // Only run face detection if models are loaded
+        if (modelsLoaded) {
+          // Try TinyFaceDetector first (fast), then fall back to SSD Mobilenet (more accurate)
+          let detection = await faceapi.detectSingleFace(
             videoRef.current,
-            new faceapi.SsdMobilenetv1Options({ minConfidence: 0.35 })
-          ) as any;
-        }
-        if (detection) {
-          const { x, width } = detection.box;
-          const video = videoRef.current;
-          const videoWidth = video.videoWidth;
-          const faceCenterX = x + width / 2;
-          const screenCenterX = videoWidth / 2;
-          const distance = Math.abs(faceCenterX - screenCenterX);
-          const isCentered = distance < videoWidth * 0.2 && width > videoWidth * 0.18;
-          setIsFaceCentered(isCentered);
+            new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.4 })
+          );
+          if (!detection) {
+            detection = await faceapi.detectSingleFace(
+              videoRef.current,
+              new faceapi.SsdMobilenetv1Options({ minConfidence: 0.35 })
+            ) as any;
+          }
+          if (detection) {
+            const { x, width } = detection.box;
+            const video = videoRef.current;
+            const videoWidth = video.videoWidth;
+            const faceCenterX = x + width / 2;
+            const screenCenterX = videoWidth / 2;
+            const distance = Math.abs(faceCenterX - screenCenterX);
+            const isCentered = distance < videoWidth * 0.2 && width > videoWidth * 0.18;
+            setIsFaceCentered(isCentered);
+          } else {
+            setIsFaceCentered(false);
+          }
         } else {
-          setIsFaceCentered(false);
+          // If models didn't load, keep face centered to allow capture
+          setIsFaceCentered(true);
         }
       } catch (e) {
         console.error('Detection error', e);
+        setIsFaceCentered(modelsLoaded ? false : true);
       }
       detectionIntervalRef.current = requestAnimationFrame(detect);
     };
