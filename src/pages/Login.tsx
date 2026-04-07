@@ -268,7 +268,7 @@ const Login = () => {
 
           {/* Social Login */}
           <div className="grid grid-cols-1 gap-4">
-            <Button 
+            {/* <Button 
               type="button"
               variant="outline" 
               className="h-12 border-indigo-500/30 bg-indigo-500/5 hover:bg-indigo-500/10 text-indigo-400 font-semibold"
@@ -276,7 +276,7 @@ const Login = () => {
             >
               <ScanFace className="w-5 h-5 mr-2" />
               Sign in with Face Recognition
-            </Button>
+            </Button> */}
             <div className="grid grid-cols-2 gap-4">
               <Button 
                 variant="outline" 

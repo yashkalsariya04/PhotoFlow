@@ -25,6 +25,9 @@ import ClientPortal from "./pages/ClientPortal";
 import ClientEventAccess from "./pages/ClientEventAccess";
 import ClientPhotos from "./pages/ClientPhotos";
 import GhibliStudio from "@/pages/GhibliStudio";
+import Features from "@/components/landing/Features";
+import Demo from "./pages/Demo";
+import Blog from "./pages/Blog";
 import ProtectedRoute from '@/components/auth/ProtectedRoute';
 
 // Admin Imports
@@ -48,6 +51,10 @@ const App = () => (
           <BrowserRouter>
             <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/demo" element={<Demo />} />
+            <Route path="/blog" element={<Blog />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />

@@ -241,7 +241,7 @@ const Settings = () => {
         </motion.div>
 
         {/* Privacy & Security */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="p-6 rounded-2xl glass space-y-6">
+        {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }} className="p-6 rounded-2xl glass space-y-6">
           <div className="flex items-center gap-3 pb-4 border-b border-border">
             <Shield className="w-5 h-5 text-primary" />
             <h2 className="text-lg font-semibold">Privacy & Security</h2>
@@ -296,7 +296,7 @@ const Settings = () => {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
         
         <Button className="gradient-primary" onClick={handleSave} disabled={saving}>
           {saving ? 'Saving...' : 'Save Changes'}
