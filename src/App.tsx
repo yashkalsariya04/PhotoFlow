@@ -28,6 +28,17 @@ import GhibliStudio from "@/pages/GhibliStudio";
 import Features from "@/components/landing/Features";
 import Demo from "./pages/Demo";
 import Blog from "./pages/Blog";
+import About from "./pages/About";
+import Careers from "./pages/Careers";
+import Press from "./pages/Press";
+import HelpCenter from "./pages/HelpCenter";
+import Community from "./pages/Community";
+import Tutorials from "./pages/Tutorials";
+import Status from "./pages/Status";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Security from "./pages/Security";
+import API from "./pages/API";
 import ProtectedRoute from '@/components/auth/ProtectedRoute';
 
 // Admin Imports
@@ -55,6 +66,17 @@ const App = () => (
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/demo" element={<Demo />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/api" element={<API />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/press" element={<Press />} />
+            <Route path="/help" element={<HelpCenter />} />
+            <Route path="/community" element={<Community />} />
+            <Route path="/tutorials" element={<Tutorials />} />
+            <Route path="/status" element={<Status />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/security" element={<Security />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<Signup />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
