@@ -68,10 +68,10 @@ const API = () => {
     }
   ];
 
-  const authentication = {
-    apiKey: 'sk_photoflow_1234567890abcdef',
-    bearerToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
-  };
+  // const authentication = {
+  //   apiKey: 'sk_photoflow_1234567890abcdef',
+  //   bearerToken: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...'
+  // };
 
   const rateLimits = [
     { tier: 'Free', requests: '1,000', window: 'per hour' },
@@ -109,7 +109,7 @@ const API = () => {
           </div>
         </div>
         
-        {/* Authentication */}
+        {/* Authentication
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Authentication</h2>
           <div className="border border-border rounded-lg p-6 mb-6">
@@ -165,7 +165,7 @@ const API = () => {
         </div>
         
         {/* API Endpoints */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-8">API Endpoints</h2>
           <div className="space-y-8">
             {endpoints.map((endpoint, index) => (
@@ -216,10 +216,10 @@ const API = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         
         {/* Rate Limits */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Rate Limits</h2>
           <div className="grid md:grid-cols-3 gap-6">
             {rateLimits.map((limit, index) => (
@@ -239,10 +239,10 @@ const API = () => {
               All API responses include rate limit headers: X-RateLimit-Limit, X-RateLimit-Remaining, and X-RateLimit-Reset.
             </p>
           </div>
-        </div>
+        </div> */}
         
         {/* Response Format */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Response Format</h2>
           <div className="border border-border rounded-lg p-6">
             <h3 className="font-semibold mb-4">Success Response</h3>
@@ -273,10 +273,10 @@ const API = () => {
 }`}</code>
             </pre>
           </div>
-        </div>
+        </div>  */}
         
         {/* SDKs and Libraries */}
-        <div className="mb-12">
+        {/* <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">SDKs & Libraries</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="border border-border rounded-lg p-6">
@@ -298,7 +298,7 @@ const API = () => {
               <code className="text-xs bg-secondary px-2 py-1 rounded">gem install photoflow</code>
             </div>
           </div>
-        </div>
+        </div> */}
         
         {/* Support */}
         <div className="bg-secondary/50 rounded-lg p-8 text-center">

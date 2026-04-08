@@ -88,7 +88,7 @@ const Tutorials = () => {
         </p>
         
         {/* Featured Tutorial */}
-        <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-8 mb-12">
+        {/* <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-lg p-8 mb-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <div className="flex items-center gap-2 mb-4">
@@ -121,7 +121,7 @@ const Tutorials = () => {
             </div>
           </div>
         </div>
-        
+         */}
         {/* Category Filter */}
         <div className="flex items-center gap-4 mb-8">
           <Filter className="w-5 h-5 text-muted-foreground" />
@@ -143,7 +143,7 @@ const Tutorials = () => {
         </div>
         
         {/* Tutorial Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {filteredTutorials.map((tutorial, index) => (
             <div key={index} className="border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
               <div className="aspect-video bg-secondary relative">
@@ -178,7 +178,7 @@ const Tutorials = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
         
         {/* Learning Paths */}
         <div>
@@ -192,11 +192,11 @@ const Tutorials = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Start your PhotoFlow journey with the fundamentals.
               </p>
-              <ul className="text-sm space-y-1 mb-4">
+              {/* <ul className="text-sm space-y-1 mb-4">
                 <li>6 tutorials</li>
                 <li>1.5 hours total</li>
                 <li>Certificate of completion</li>
-              </ul>
+              </ul> */}
               <button className="text-primary hover:underline text-sm">Start Path</button>
             </div>
             
@@ -208,11 +208,11 @@ const Tutorials = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Advanced techniques for professional photographers.
               </p>
-              <ul className="text-sm space-y-1 mb-4">
+              {/* <ul className="text-sm space-y-1 mb-4">
                 <li>8 tutorials</li>
                 <li>3 hours total</li>
                 <li>Certificate of completion</li>
-              </ul>
+              </ul> */}
               <button className="text-primary hover:underline text-sm">Start Path</button>
             </div>
             
@@ -224,11 +224,11 @@ const Tutorials = () => {
               <p className="text-sm text-muted-foreground mb-4">
                 Grow your photography business with PhotoFlow.
               </p>
-              <ul className="text-sm space-y-1 mb-4">
+              {/* <ul className="text-sm space-y-1 mb-4">
                 <li>5 tutorials</li>
                 <li>2 hours total</li>
                 <li>Certificate of completion</li>
-              </ul>
+              </ul> */}
               <button className="text-primary hover:underline text-sm">Start Path</button>
             </div>
           </div>

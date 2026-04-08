@@ -29,7 +29,7 @@ const Careers = () => {
               <p className="text-muted-foreground">Continuous learning opportunities and career development paths.</p>
             </div>
           </div>
-          
+{/*           
           <h2 className="text-2xl font-semibold mt-12 mb-6">Open Positions</h2>
           
           <div className="space-y-6">
@@ -60,7 +60,7 @@ const Careers = () => {
               </button>
             </div>
           </div>
-          
+           */}
           <h2 className="text-2xl font-semibold mt-12 mb-6">Our Culture</h2>
           <p className="mb-6">
             At PhotoFlow, we believe in fostering an environment where creativity, innovation, and collaboration thrive. 

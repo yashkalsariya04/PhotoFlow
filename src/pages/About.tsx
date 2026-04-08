@@ -20,7 +20,7 @@ const About = () => {
             
             <h2 className="text-2xl font-semibold mt-12 mb-6">Our Story</h2>
             <p className="mb-6">
-              Founded in 2024 by a team of photographers and AI engineers, PhotoFlow was born from a simple observation: 
+              Founded in 2026 by a team of photographers and AI engineers, PhotoFlow was born from a simple observation: 
               photographers spend too much time on administrative tasks and not enough time behind the lens. Our platform 
               leverages artificial intelligence to automate tedious processes like photo sorting, face recognition, and client delivery.
             </p>

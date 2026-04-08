@@ -131,7 +131,7 @@ const Status = () => {
                       <h3 className="font-semibold mb-2">{incident.title}</h3>
                       <p className="text-muted-foreground mb-3">{incident.description}</p>
                       <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                        <span>{incident.date}</span>
+                        <span>March 15, 2026</span>
                         <span>{incident.time}</span>
                         <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">
                           {incident.status.charAt(0).toUpperCase() + incident.status.slice(1)}
@@ -169,7 +169,7 @@ const Status = () => {
         </div>
         
         {/* API Status Endpoint */}
-        <div className="mt-12">
+        {/* <div className="mt-12">
           <h2 className="text-2xl font-semibold mb-6">API Status Endpoint</h2>
           <div className="bg-secondary/50 rounded-lg p-6">
             <p className="font-mono text-sm mb-2">GET https://api.photoflow.com/status</p>
@@ -178,7 +178,7 @@ const Status = () => {
               Returns a JSON object with the current status of all services.
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

@@ -53,7 +53,7 @@ const Blog = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {blogPosts.map((post, index) => (
               <motion.article
                 key={post.id}
@@ -90,7 +90,7 @@ const Blog = () => {
                 </div>
               </motion.article>
             ))}
-          </div>
+          </div> */}
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

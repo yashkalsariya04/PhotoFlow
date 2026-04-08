@@ -212,20 +212,6 @@ const Security = () => {
           </div>
         </div>
         
-        {/* Report Security Issues */}
-        <div className="bg-gradient-to-r from-red-50 to-orange-50 dark:from-red-900/20 dark:to-orange-900/20 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-semibold mb-4">Report a Security Issue</h2>
-          <p className="text-muted-foreground mb-6">
-            If you discover a security vulnerability, please report it to us immediately. 
-            We take all reports seriously and will respond promptly.
-          </p>
-          <div className="bg-white dark:bg-background rounded-lg p-4 max-w-md mx-auto">
-            <p className="font-mono text-sm mb-2">yashkalsariya040@gmail.com</p>
-            <p className="text-xs text-muted-foreground">
-              We offer a bug bounty program for responsible disclosure
-            </p>
-          </div>
-        </div>
         
         {/* Security Updates */}
         <div className="mt-12">

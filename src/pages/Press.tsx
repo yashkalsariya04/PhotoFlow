@@ -13,7 +13,7 @@ const Press = () => {
           <p className="mb-6">
             PhotoFlow is an AI-powered photo management platform designed specifically for professional photographers. 
             Our platform combines cutting-edge artificial intelligence with intuitive design to help photographers organize, 
-            edit, and deliver their work more efficiently. Founded in 2024, we're on a mission to revolutionize how 
+            edit, and deliver their work more efficiently. Founded in 2026, we're on a mission to revolutionize how 
             photographers manage their digital workflows.
           </p>
           
@@ -21,7 +21,7 @@ const Press = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-12">
             <div>
               <h3 className="font-semibold mb-2">Founded</h3>
-              <p className="text-muted-foreground">2024</p>
+              <p className="text-muted-foreground">2026</p>
             </div>
             <div>
               <h3 className="font-semibold mb-2">Headquarters</h3>
@@ -54,14 +54,14 @@ const Press = () => {
           <div className="space-y-6 mb-12">
             <div className="border border-border rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">PhotoFlow Launches AI-Powered Photo Management Platform</h3>
-              <p className="text-muted-foreground mb-2">March 15, 2024</p>
+              <p className="text-muted-foreground mb-2">March 15, 2026</p>
               <p className="mb-4">PhotoFlow today announced the launch of its revolutionary AI-powered photo management platform designed specifically for professional photographers.</p>
               <button className="text-primary hover:underline">Read Full Press Release</button>
             </div>
             
             <div className="border border-border rounded-lg p-6">
               <h3 className="text-xl font-semibold mb-2">PhotoFlow Secures $2M Seed Funding</h3>
-              <p className="text-muted-foreground mb-2">February 28, 2024</p>
+              <p className="text-muted-foreground mb-2">February 28, 2026</p>
               <p className="mb-4">PhotoFlow announced today that it has secured $2 million in seed funding to accelerate product development and expand its team.</p>
               <button className="text-primary hover:underline">Read Full Press Release</button>
             </div>
@@ -72,12 +72,12 @@ const Press = () => {
             <div className="border border-border rounded-lg p-4">
               <h3 className="font-semibold mb-2">TechCrunch</h3>
               <p className="text-muted-foreground mb-2">"PhotoFlow Uses AI to Simplify Photo Management for Professionals"</p>
-              <p className="text-sm text-muted-foreground">March 20, 2024</p>
+              <p className="text-sm text-muted-foreground">March 20, 2026</p>
             </div>
             <div className="border border-border rounded-lg p-4">
               <h3 className="font-semibold mb-2">Photography Weekly</h3>
               <p className="text-muted-foreground mb-2">"The Future of Photo Organization: Interview with PhotoFlow's Founder"</p>
-              <p className="text-sm text-muted-foreground">April 2, 2024</p>
+              <p className="text-sm text-muted-foreground">April 2, 2026</p>
             </div>
           </div>
           
@@ -86,8 +86,8 @@ const Press = () => {
             For media inquiries, press releases, or interview requests, please contact:
           </p>
           <div className="bg-secondary/50 rounded-lg p-6">
-            <p className="mb-2"><strong>Email:</strong> press@photoflow.com</p>
-            <p className="mb-2"><strong>Phone:</strong> +1 (555) 123-4567</p>
+            <p className="mb-2"><strong>Email:</strong> yashkalsariya@gmail.com</p>
+            <p className="mb-2"><strong>Phone:</strong> +91 73839 08978</p>
             <p><strong>Response Time:</strong> Within 24 hours</p>
           </div>
         </div>
