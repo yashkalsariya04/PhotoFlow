@@ -7,7 +7,7 @@ import { Play, ArrowRight, CheckCircle } from 'lucide-react';
 const Demo = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar showAuthButtons={false} />
+      <Navbar showAuthButtons={true} />
       <main className="pt-24 pb-16 px-4">
         <div className="container mx-auto">
           <motion.div

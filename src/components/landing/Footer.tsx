@@ -45,7 +45,10 @@ const Footer = () => {
               <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
                 <Camera className="w-6 h-6 text-primary-foreground" />
               </div>
-              <span className="text-xl font-bold">PhotoFlow</span>
+              <span className="text-lg font-bold">
+                <span className="text font-bold">Photo</span>
+                <span className="text-purple-500">Flow</span>
+              </span>
             </Link>
             <p className="text-muted-foreground text-sm mb-6">
               AI-powered photo management for professional photographers.
@@ -123,7 +126,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="pt-8 border-t border-border/50 text-center">
           <p className="text-sm text-muted-foreground">
-            © PhotoFlow All rights reserved.
+            © <span className="text font-bold">Photo</span><span className="text-purple-500">Flow</span> All rights reserved.
           </p>
         </div>
       </div>

@@ -214,7 +214,10 @@ const Signup = () => {
             <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center">
               <Camera className="w-6 h-6 text-primary-foreground" />
             </div>
-            <span className="text-xl font-bold">PhotoFlow</span>
+            <span className="text-lg font-bold">
+                <span className="text font-bold">Photo</span>
+                <span className="text-purple-500">Flow</span>
+              </span>
           </Link>
 
           {/* Header */}

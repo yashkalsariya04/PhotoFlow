@@ -92,7 +92,10 @@ const Sidebar = ({ collapsed, onToggle }: SidebarProps) => {
               exit={{ opacity: 0 }}
               className="text-lg font-bold text-sidebar-foreground"
             >
-              PhotoFlow
+              <span className="text-lg font-bold">
+                <span className="text font-bold">Photo</span>
+                <span className="text-purple-500">Flow</span>
+              </span>
             </motion.span>
           )}
         </Link>
