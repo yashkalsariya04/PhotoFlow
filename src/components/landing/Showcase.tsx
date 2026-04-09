@@ -37,7 +37,7 @@ const Showcase = () => {
               }`}
             >
               <div className={`relative overflow-hidden rounded-xl ${
-                index === 0 ? 'aspect-square md:aspect-[4/3]' : 'aspect-square'
+                index === 0 ? 'aspect-square' : 'aspect-square'
               }`}>
                 <img
                   src={photo.url}

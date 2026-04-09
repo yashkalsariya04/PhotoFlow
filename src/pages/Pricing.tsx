@@ -48,7 +48,7 @@ const Pricing = () => {
                   <span className="text-muted-foreground">/month</span>
                 </div>
                 <Button className={`w-full mb-8 ${plan.popular ? 'gradient-primary' : ''}`} variant={plan.popular ? 'default' : 'outline'}>
-                  {isFromUpgrade ? (plan.id === 'free' ? 'Current Plan' : plan.id === 'pro' ? 'Upgrade to Pro' : 'Upgrade to Studio') : plan.cta}
+                  {isFromUpgrade ? (plan.id === 'free' ? 'Start Free' : plan.id === 'pro' ? 'Start Pro Trial' : 'Contact Sales') : plan.cta}
                 </Button>
                 <ul className="space-y-3">
                   {plan.features.map((feature) => (
