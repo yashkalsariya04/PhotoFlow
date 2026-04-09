@@ -1,6 +1,9 @@
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 const Press = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Press Kit</h1>
         
@@ -92,6 +95,7 @@ const Press = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

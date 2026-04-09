@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Play, BookOpen, Clock, Star, Filter } from 'lucide-react';
-
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 const Tutorials = () => {
   const tutorials = [
     {
@@ -81,6 +82,7 @@ const Tutorials = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">PhotoFlow Tutorials</h1>
         <p className="text-xl text-muted-foreground mb-12">
@@ -234,6 +236,7 @@ const Tutorials = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

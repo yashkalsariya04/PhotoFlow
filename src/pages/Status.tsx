@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { CheckCircle, AlertCircle, Clock, Activity, Server, Database, Wifi } from 'lucide-react';
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 
 const Status = () => {
   const [services, setServices] = useState([
@@ -59,6 +61,7 @@ const Status = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">System Status</h1>
         <p className="text-xl text-muted-foreground mb-12">
@@ -180,6 +183,7 @@ const Status = () => {
           </div>
         </div> */}
       </div>
+      <Footer />
     </div>
   );
 };

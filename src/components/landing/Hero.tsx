@@ -26,7 +26,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
     >
       {/* Background Image with Overlay */}
       <motion.div
@@ -127,7 +127,7 @@ const Hero = () => {
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
         >
           <div className="flex flex-col items-center gap-2 text-muted-foreground">
-            <span className="text-sm">Scroll to explore</span>
+            {/* <span className="text-sm">Scroll to explore</span> */}
             <motion.div
               animate={{ y: [0,8, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}

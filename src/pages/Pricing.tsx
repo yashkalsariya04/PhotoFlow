@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Check, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -6,13 +6,21 @@ import { Switch } from '@/components/ui/switch';
 import Navbar from '@/components/landing/Navbar';
 import Footer from '@/components/landing/Footer';
 import { pricingPlans } from '@/data/mockData';
+import { useSearchParams } from 'react-router-dom';
 
 const Pricing = () => {
   const [yearly, setYearly] = useState(false);
+  const [searchParams] = useSearchParams();
+  const [isFromUpgrade, setIsFromUpgrade] = useState(false);
+
+  useEffect(() => {
+    const fromUpgrade = searchParams.get('from') === 'upgrade';
+    setIsFromUpgrade(fromUpgrade);
+  }, [searchParams]);
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar showAuthButtons={true} />
+      <Navbar showAuthButtons={!isFromUpgrade} />
       <main className="pt-24 pb-16 px-4">
         <div className="container mx-auto">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-12">
@@ -39,7 +47,9 @@ const Pricing = () => {
                   <span className="text-4xl font-bold">${yearly ? plan.yearlyPrice : plan.price}</span>
                   <span className="text-muted-foreground">/month</span>
                 </div>
-                <Button className={`w-full mb-8 ${plan.popular ? 'gradient-primary' : ''}`} variant={plan.popular ? 'default' : 'outline'}>{plan.cta}</Button>
+                <Button className={`w-full mb-8 ${plan.popular ? 'gradient-primary' : ''}`} variant={plan.popular ? 'default' : 'outline'}>
+                  {isFromUpgrade ? (plan.id === 'free' ? 'Current Plan' : plan.id === 'pro' ? 'Upgrade to Pro' : 'Upgrade to Studio') : plan.cta}
+                </Button>
                 <ul className="space-y-3">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-center gap-2 text-sm">

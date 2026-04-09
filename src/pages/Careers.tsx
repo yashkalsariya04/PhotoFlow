@@ -1,6 +1,11 @@
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
+
 const Careers = () => {
+ 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-8">Careers at PhotoFlow</h1>
         
@@ -80,6 +85,7 @@ const Careers = () => {
           </ul>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

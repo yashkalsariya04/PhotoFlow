@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Search, HelpCircle, Book, Mail, MessageCircle } from 'lucide-react';
-
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 const HelpCenter = () => {
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -56,6 +57,7 @@ const HelpCenter = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">Help Center</h1>
         <p className="text-xl text-muted-foreground mb-12">
@@ -156,6 +158,7 @@ const HelpCenter = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

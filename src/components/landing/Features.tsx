@@ -1,4 +1,5 @@
 import Navbar from '@/components/landing/Navbar';
+import Footer from '@/components/landing/Footer';
 
 import { motion } from 'framer-motion';
 import { Sparkles, FolderKanban, Share2, Shield, Zap, Cloud } from 'lucide-react';
@@ -39,7 +40,7 @@ const features = [
 const Features = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
+      <Navbar showAuthButtons={true}/>
       <main className="pt-24 pb-16 px-4">
         <section className="px-4 relative overflow-hidden">
           {/* Background gradient */}
@@ -89,6 +90,7 @@ const Features = () => {
           </div>
         </section>
       </main>
+      
     </div>
   );
 };

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Search, Bell, Plus, ChevronDown, Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,8 +23,13 @@ const TopBar = ({ sidebarCollapsed, variant = 'default' }: TopBarProps) => {
   const [searchQuery, setSearchQuery] = useState('');
   const { user, logout } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
   const { toast } = useToast();
   const { setTheme, theme } = useTheme();
+
+  // Pages where Upgrade Plan should not appear
+  const hideUpgradePages = ['/features', '/demo', '/blog'];
+  const shouldHideUpgrade = hideUpgradePages.includes(location.pathname);
 
   const handleSignOut = () => {
     logout();
@@ -123,9 +128,11 @@ const TopBar = ({ sidebarCollapsed, variant = 'default' }: TopBarProps) => {
                 <DropdownMenuItem asChild>
                   <Link to="/settings" className="cursor-pointer">Settings</Link>
                 </DropdownMenuItem>
-                <DropdownMenuItem asChild>
-                  <Link to="/pricing" className="cursor-pointer">Upgrade Plan</Link>
-                </DropdownMenuItem>
+                {!shouldHideUpgrade && (
+                  <DropdownMenuItem asChild>
+                    <Link to="/pricing?from=upgrade" className="cursor-pointer">Upgrade Plan</Link>
+                  </DropdownMenuItem>
+                )}
               </>
             )}
             <DropdownMenuItem onClick={handleSignOut} className="text-destructive cursor-pointer">

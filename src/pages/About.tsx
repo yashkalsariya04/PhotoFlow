@@ -1,7 +1,9 @@
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 const About = () => {
   return (
     <>
-      
+      <Navbar showAuthButtons={true}/>
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold mb-8">About PhotoFlow</h1>
@@ -66,6 +68,7 @@ const About = () => {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );

@@ -1,5 +1,6 @@
 import { Users, MessageCircle, Trophy, Calendar, Star, Heart } from 'lucide-react';
-
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
 const Community = () => {
   const features = [
     {
@@ -57,6 +58,7 @@ const Community = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">PhotoFlow Community</h1>
         <p className="text-xl text-muted-foreground mb-12">
@@ -177,6 +179,7 @@ const Community = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

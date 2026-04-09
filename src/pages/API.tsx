@@ -1,7 +1,11 @@
 import { Code, Copy, CheckCircle, AlertCircle, Book, Terminal, Zap, Shield } from 'lucide-react';
 import { useState } from 'react';
+import Footer from '@/components/landing/Footer';
+import Navbar from '@/components/landing/Navbar';
+
 
 const API = () => {
+
   const [copiedCode, setCopiedCode] = useState('');
 
   const handleCopy = (code: string) => {
@@ -80,7 +84,9 @@ const API = () => {
   ];
 
   return (
+
     <div className="container mx-auto px-4 py-16">
+      <Navbar showAuthButtons={true}/>
       <div className="max-w-6xl mx-auto">
         <h1 className="text-4xl font-bold mb-4">PhotoFlow API</h1>
         <p className="text-xl text-muted-foreground mb-12">
@@ -317,6 +323,7 @@ const API = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
