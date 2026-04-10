@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { MapPin, Instagram, Twitter, Globe, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { samplePhotos } from '@/data/mockData';
+import { samplePhotos, photographerProfile } from '@/data/mockData';
 import { api } from '@/lib/api';
 
 import DashboardLayout from '@/components/layout/DashboardLayout';
@@ -56,9 +56,30 @@ const Portfolio = () => {
           )}
           <p className="max-w-xl mx-auto text-muted-foreground mb-8">Capturing authentic moments through the lens</p>
           <div className="flex justify-center gap-3 mb-8">
-            <Button variant="outline" size="icon" className="rounded-full"><Instagram className="w-5 h-5" /></Button>
-            <Button variant="outline" size="icon" className="rounded-full"><Twitter className="w-5 h-5" /></Button>
-            <Button variant="outline" size="icon" className="rounded-full"><Globe className="w-5 h-5" /></Button>
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full"
+              onClick={() => window.open(`https://instagram.com/${user?.social?.instagram || photographerProfile.social.instagram.replace('@', '')}`, '_blank')}
+            >
+              <Instagram className="w-5 h-5" />
+            </Button>
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full"
+              onClick={() => window.open(`https://twitter.com/${user?.social?.twitter || photographerProfile.social.twitter.replace('@', '')}`, '_blank')}
+            >
+              <Twitter className="w-5 h-5" />
+            </Button>
+            <Button 
+              variant="outline" 
+              size="icon" 
+              className="rounded-full"
+              onClick={() => window.open(`https://${user?.website || photographerProfile.website}`, '_blank')}
+            >
+              <Globe className="w-5 h-5" />
+            </Button>
           </div>
           <Button 
             className="gradient-primary rounded-full px-8"
