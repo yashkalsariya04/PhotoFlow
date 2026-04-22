@@ -1,4 +1,4 @@
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://photoflow.sonomainfotech.in/api';
+export const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://photoflow.in/api';
 
 class ApiClient {
   private baseURL: string;

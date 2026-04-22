@@ -30,7 +30,7 @@ async function testThumbnailFix() {
     
     // Test the public thumbnail endpoint
     console.log('\n🌐 Testing public thumbnail:');
-    const response = await fetch(`https://PhotoFlow.sonomainfotech.in/api/photos/${photoId}/thumbnail/public`);
+    const response = await fetch(`https://PhotoFlow.in/api/photos/${photoId}/thumbnail/public`);
     
     console.log(`📊 Status: ${response.status}`);
     
@@ -46,8 +46,8 @@ async function testThumbnailFix() {
       require('fs').writeFileSync('test-thumbnail.jpg', Buffer.from(buffer));
       console.log(`💾 Saved as: test-thumbnail.jpg`);
       
-      console.log(`\n🔗 Test URL: https://PhotoFlow.sonomainfotech.in/client/access/JXPYWF5D`);
-      console.log(`🖼️ Thumbnail URL: https://PhotoFlow.sonomainfotech.in/api/photos/${photoId}/thumbnail/public`);
+      console.log(`\n🔗 Test URL: https://PhotoFlow.in/client/access/JXPYWF5D`);
+      console.log(`🖼️ Thumbnail URL: https://PhotoFlow.in/api/photos/${photoId}/thumbnail/public`);
       
     } else {
       const error = await response.text();

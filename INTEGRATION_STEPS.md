@@ -112,14 +112,14 @@ Open browser to **http://localhost:5173** and test:
 
 ### Register User
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
+curl -X POST https://PhotoFlow.in/api/auth/register \
   -H "Content-Type: application/json" \
   -d "{\"name\":\"Test User\",\"email\":\"test@example.com\",\"password\":\"password123\"}"
 ```
 
 ### Login
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/login \
+curl -X POST https://PhotoFlow.in/api/auth/login \
   -H "Content-Type: application/json" \
   -d "{\"email\":\"test@example.com\",\"password\":\"password123\"}"
 ```
@@ -128,7 +128,7 @@ Save the returned JWT token.
 
 ### Create Event
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/events \
+curl -X POST https://PhotoFlow.in/api/events \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -d "{\"title\":\"Test Event\",\"eventDate\":\"2024-12-25T00:00:00.000Z\"}"
@@ -136,7 +136,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/events \
 
 ### Upload Photo
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/photos/upload \
+curl -X POST https://PhotoFlow.in/api/photos/upload \
   -H "Authorization: Bearer YOUR_JWT_TOKEN" \
   -F "file=@path/to/photo.jpg" \
   -F "eventId=EVENT_ID"
@@ -159,7 +159,7 @@ MAX_FILE_SIZE=52428800
 ### Frontend (.env)
 Located at `.env`:
 ```env
-VITE_API_URL=https://PhotoFlow.sonomainfotech.in/api
+VITE_API_URL=https://PhotoFlow.in/api
 VITE_APP_NAME=PhotoFlow
 VITE_APP_URL=http://localhost:5173
 ```
@@ -297,8 +297,8 @@ const handleClientAccess = async (accessCode, selfie, clientData) => {
    - Frontend: Changes trigger instant HMR
 
 4. **Test Changes**
-   - Frontend: https://PhotoFlow.sonomainfotech.in
-   - Backend API: https://PhotoFlow.sonomainfotech.in/api
+   - Frontend: https://PhotoFlow.in
+   - Backend API: https://PhotoFlow.in/api
 
 ### Adding New Features
 

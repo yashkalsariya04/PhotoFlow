@@ -32,7 +32,7 @@ async function testThumbnails() {
     // Test authenticated thumbnail (should fail without auth)
     console.log('1. Authenticated thumbnail:');
     try {
-      const authResponse = await fetch(`https://photoflow.sonomainfotech.in/api/photos/${photoId}/thumbnail`);
+      const authResponse = await fetch(`https://PhotoFlow.in/api/photos/${photoId}/thumbnail`);
       console.log(`   Status: ${authResponse.status} (expected 401)`);
     } catch (error) {
       console.log(`   Error: ${error.message}`);
@@ -41,7 +41,7 @@ async function testThumbnails() {
     // Test public thumbnail (should work)
     console.log('2. Public thumbnail:');
     try {
-      const publicResponse = await fetch(`https://photoflow.sonomainfotech.in/api/photos/${photoId}/thumbnail/public`);
+      const publicResponse = await fetch(`https://PhotoFlow.in/api/photos/${photoId}/thumbnail/public`);
       console.log(`   Status: ${publicResponse.status}`);
       
       if (publicResponse.ok) {

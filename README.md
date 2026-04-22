@@ -106,9 +106,9 @@ bun install
 
 Frontend (.env):
 ```env
-VITE_API_URL=https://PhotoFlow.sonomainfotech.in/api
+VITE_API_URL=https://PhotoFlow.in/api
 VITE_APP_NAME=PhotoFlow
-VITE_APP_URL=https://PhotoFlow.sonomainfotech.in
+VITE_APP_URL=https://PhotoFlow.in
 ```
 
 Backend (backend/.env):
@@ -145,7 +145,7 @@ bun run start:dev
 bun run dev
 ```
 
-Visit https://PhotoFlow.sonomainfotech.in for the frontend and https://PhotoFlow.sonomainfotech.in/api for the backend.
+Visit https://PhotoFlow.in for the frontend and https://PhotoFlow.in/api for the backend.
 
 ## 📖 User Workflows
 

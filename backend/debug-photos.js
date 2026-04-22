@@ -60,7 +60,7 @@ async function debugPhotos() {
     
     // Test public thumbnail
     try {
-      const response = await fetch(`https://PhotoFlow.sonomainfotech.in/api/photos/${photoData._id}/thumbnail/public`);
+      const response = await fetch(`https://PhotoFlow.in/api/photos/${photoData._id}/thumbnail/public`);
       console.log(`  🖼️ Public Thumbnail Status: ${response.status}`);
       
       if (response.ok) {

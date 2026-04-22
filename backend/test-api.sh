@@ -2,7 +2,7 @@
 
 # API Test Script for PhotoFlow Backend
 
-BASE_URL="https://PhotoFlow.sonomainfotech.in/api"
+BASE_URL="https://PhotoFlow.in/api"
 TOKEN=""
 
 echo "🧪 PhotoFlow API Test Suite"

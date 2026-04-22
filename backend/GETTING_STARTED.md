@@ -54,7 +54,7 @@ You should see:
 🚀 PhotoFlow Backend
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ✅ Server running on http://localhost:3000
-✅ API available at https://PhotoFlow.sonomainfotech.in/api
+✅ API available at https://PhotoFlow.in/api
 ✅ MongoDB connected successfully
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
@@ -111,7 +111,7 @@ This script will:
 
 **1. Register a user:**
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
+curl -X POST https://PhotoFlow.in/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{"name":"Test User","email":"test@example.com","password":"password123"}'
 ```
@@ -126,7 +126,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
 
 **3. Upload a photo:**
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/photos/upload \
+curl -X POST https://PhotoFlow.in/api/photos/upload \
   -H "Authorization: Bearer YOUR_TOKEN_HERE" \
   -F "file=@/path/to/photo.jpg"
 ```
@@ -140,7 +140,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/photos/upload \
 
 2. **Set up environment:**
    - Create a new environment
-   - Add variable `baseUrl` = `https://PhotoFlow.sonomainfotech.in/api`
+   - Add variable `baseUrl` = `https://PhotoFlow.in/api`
       - Add variable `token` (leave empty for now)
 
 3. **Register and Login:**

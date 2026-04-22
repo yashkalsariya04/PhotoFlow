@@ -20,7 +20,7 @@ async function testPixelMatching() {
     formData.append('clientName', 'Test User');
     formData.append('clientEmail', 'test@pixel.com');
     
-    const response = await fetch(`https://PhotoFlow.sonomainfotech.in/api/events/access/${ACCESS_CODE}/recognize`, {
+    const response = await fetch(`https://PhotoFlow.in/api/events/access/${ACCESS_CODE}/recognize`, {
       method: 'POST',
       body: formData
     });
@@ -41,7 +41,7 @@ async function testPixelMatching() {
       }
       
       console.log(`🔗 Client Access ID: ${result.clientAccess._id}`);
-      console.log(`\n📱 You can view results at: https://PhotoFlow.sonomainfotech.in/client/photos/${result.clientAccess._id}`);
+      console.log(`\n📱 You can view results at: https://PhotoFlow.in/client/photos/${result.clientAccess._id}`);
       
     } else {
       const error = await response.text();
@@ -54,7 +54,7 @@ async function testPixelMatching() {
   
   console.log('\n🎯 How to test with real images:');
   console.log('1. Upload some photos to your test event (HSVNL75B)');
-  console.log('2. Go to: https://PhotoFlow.sonomainfotech.in/client/access/HSVNL75B');
+  console.log('2. Go to: https://PhotoFlow.in/client/access/HSVNL75B');
   console.log('3. Upload a selfie');
   console.log('4. The system will use both face recognition AND pixel similarity');
   console.log('5. Check the results for similar photos based on pixels!');

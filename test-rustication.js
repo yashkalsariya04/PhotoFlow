@@ -1,5 +1,5 @@
 
-const API_URL = 'https://PhotoFlow.sonomainfotech.in/api';
+const API_URL = 'https://PhotoFlow.in/api';
 
 async function testRustication() {
   const timestamp = Date.now();

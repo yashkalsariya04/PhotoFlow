@@ -93,7 +93,7 @@ async function debugPhotoLoading() {
     
     try {
       // Test client photos endpoint
-      const clientResponse = await fetch(`https://photoflow.sonomainfotech.in/api/events/client/${access._id}`);
+      const clientResponse = await fetch(`https://PhotoFlow.in/api/events/client/${access._id}`);
       console.log(`📊 Client Photos API: ${clientResponse.status}`);
       
       if (clientResponse.ok) {
@@ -106,7 +106,7 @@ async function debugPhotoLoading() {
           
           for (let i = 0; i < Math.min(result.photos.length, 3); i++) {
             const photo = result.photos[i];
-            const thumbnailUrl = `https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}/thumbnail/public`;
+            const thumbnailUrl = `https://PhotoFlow.in/api/photos/${photo._id}/thumbnail/public`;
             
             try {
               const thumbResponse = await fetch(thumbnailUrl);

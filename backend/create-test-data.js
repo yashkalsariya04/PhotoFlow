@@ -7,7 +7,7 @@ async function createTestData() {
   try {
     // Step 1: Login to get token
     console.log('🔐 Logging in...');
-    const loginResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/auth/login', {
+    const loginResponse = await fetch('https://PhotoFlow.in/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -26,7 +26,7 @@ async function createTestData() {
     
     // Step 2: Create test event
     console.log('📅 Creating test event...');
-    const eventResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/events', {
+    const eventResponse = await fetch('https://PhotoFlow.in/api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -93,7 +93,7 @@ async function createTestData() {
       formData.append('files', blob, img.name);
       formData.append('eventId', event._id);
       
-      const uploadResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/photos/upload', {
+      const uploadResponse = await fetch('https://PhotoFlow.in/api/photos/upload', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -110,7 +110,7 @@ async function createTestData() {
     
     console.log('\n🎉 Test setup complete!');
     console.log(`📱 Access Code: ${event.accessCode}`);
-    console.log(`🔗 Test URL: https://PhotoFlow.sonomainfotech.in/client/access/${event.accessCode}`);
+    console.log(`🔗 Test URL: https://PhotoFlow.in/client/access/${event.accessCode}`);
     console.log(`📸 Photos uploaded: ${testImages.length}`);
     console.log('\n🧪 Now you can test face recognition with pixel similarity!');
     

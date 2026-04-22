@@ -6,7 +6,7 @@ async function quickTest() {
   
   try {
     // Step 1: Login
-    const loginResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/auth/login', {
+    const loginResponse = await fetch('https://PhotoFlow.in/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
@@ -24,7 +24,7 @@ async function quickTest() {
     console.log('✅ Logged in');
     
     // Step 2: Create event
-    const eventResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/events', {
+    const eventResponse = await fetch('https://PhotoFlow.in/api/events', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -54,7 +54,7 @@ async function quickTest() {
     formData.append('file', blob, 'test-photo-1.jpg');
     formData.append('eventId', event._id);
     
-    const uploadResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/photos/upload', {
+    const uploadResponse = await fetch('https://PhotoFlow.in/api/photos/upload', {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${token}`
@@ -74,7 +74,7 @@ async function quickTest() {
     selfieFormData.append('selfie', selfieBlob, 'selfie.jpg');
     selfieFormData.append('clientName', 'Test User');
     
-    const faceResponse = await fetch(`https://PhotoFlow.sonomainfotech.in/api/events/access/${event.accessCode}/recognize`, {
+    const faceResponse = await fetch(`https://PhotoFlow.in/api/events/access/${event.accessCode}/recognize`, {
       method: 'POST',
       body: selfieFormData
     });
@@ -85,7 +85,7 @@ async function quickTest() {
       console.log(`📊 Results: ${result.matchedPhotoCount} photos found`);
       console.log(`🎨 Pixel matches: ${result.pixelMatches || 0}`);
       console.log(`🧠 Face matches: ${result.faceMatches || 0}`);
-      console.log(`🔗 Test URL: https://PhotoFlow.sonomainfotech.in/client/access/${event.accessCode}`);
+      console.log(`🔗 Test URL: https://PhotoFlow.in/client/access/${event.accessCode}`);
     } else {
       const error = await faceResponse.text();
       console.log('❌ Face recognition failed:', error);

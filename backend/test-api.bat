@@ -3,7 +3,7 @@ REM API Test Script for PhotoFlow Backend (Windows)
 
 setlocal enabledelayedexpansion
 
-set BASE_URL=https://PhotoFlow.sonomainfotech.in/api
+set BASE_URL=https://PhotoFlow.in/api
 set TOKEN=
 
 echo ================================================

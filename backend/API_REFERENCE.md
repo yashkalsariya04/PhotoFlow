@@ -1,12 +1,12 @@
 # 📋 API Quick Reference
 
-Base URL: `https://PhotoFlow.sonomainfotech.in/api`
+Base URL: `https://PhotoFlow.in/api`
 
 ## Authentication Endpoints
 
 ### Register
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
+curl -X POST https://PhotoFlow.in/api/auth/register \
   -H "Content-Type: application/json" \
   -d '{
     "name": "John Doe",
@@ -17,7 +17,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
 
 ### Login
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/login \
+curl -X POST https://PhotoFlow.in/api/auth/login \
   -H "Content-Type: application/json" \
   -d '{
     "email": "john@example.com",
@@ -38,39 +38,39 @@ TOKEN="your-jwt-token-here"
 
 ### Upload Photo
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/photos/upload \
+curl -X POST https://PhotoFlow.in/api/photos/upload \
   -H "Authorization: Bearer $TOKEN" \
   -F "file=@/path/to/photo.jpg"
 ```
 
 ### Get All Photos
 ```bash
-curl -X GET "https://PhotoFlow.sonomainfotech.in/api/photos?page=1&limit=20" \
+curl -X GET "https://PhotoFlow.in/api/photos?page=1&limit=20" \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 ### Get Photos by Tags
 ```bash
-curl -X GET "https://PhotoFlow.sonomainfotech.in/api/photos?tags=landscape,sunset" \
+curl -X GET "https://PhotoFlow.in/api/photos?tags=landscape,sunset" \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 ### Get Single Photo
 ```bash
-curl -X GET "https://PhotoFlow.sonomainfotech.in/api/photos/PHOTO_ID" \
+curl -X GET "https://PhotoFlow.in/api/photos/PHOTO_ID" \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 ### Download Photo
 ```bash
-curl -X GET "https://PhotoFlow.sonomainfotech.in/api/photos/PHOTO_ID/download" \
+curl -X GET "https://PhotoFlow.in/api/photos/PHOTO_ID/download" \
   -H "Authorization: Bearer $TOKEN" \
   --output photo.jpg
 ```
 
 ### Get Thumbnail
 ```bash
-curl -X GET "https://PhotoFlow.sonomainfotech.in/api/photos/PHOTO_ID/thumbnail" \
+curl -X GET "https://PhotoFlow.in/api/photos/PHOTO_ID/thumbnail" \
   -H "Authorization: Bearer $TOKEN" \
   --output thumbnail.jpg
 ```
@@ -81,7 +81,7 @@ curl -X GET "https://PhotoFlow.sonomainfotech.in/api/photos/PHOTO_ID/thumbnail" 
 
 ### Create Manual Album
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums \
+curl -X POST https://PhotoFlow.in/api/albums \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{
@@ -93,7 +93,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums \
 
 ### Create Smart Album
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums \
+curl -X POST https://PhotoFlow.in/api/albums \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{
@@ -105,19 +105,19 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums \
 
 ### Get All Albums
 ```bash
-curl -X GET https://PhotoFlow.sonomainfotech.in/api/albums \
+curl -X GET https://PhotoFlow.in/api/albums \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 ### Get Single Album
 ```bash
-curl -X GET https://PhotoFlow.sonomainfotech.in/api/albums/ALBUM_ID \
+curl -X GET https://PhotoFlow.in/api/albums/ALBUM_ID \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 ### Add Photos to Album
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums/ALBUM_ID/photos \
+curl -X POST https://PhotoFlow.in/api/albums/ALBUM_ID/photos \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{
@@ -127,7 +127,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums/ALBUM_ID/photos \
 
 ### Remove Photos from Album
 ```bash
-curl -X DELETE https://PhotoFlow.sonomainfotech.in/api/albums/ALBUM_ID/photos \
+curl -X DELETE https://PhotoFlow.in/api/albums/ALBUM_ID/photos \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{
@@ -141,7 +141,7 @@ curl -X DELETE https://PhotoFlow.sonomainfotech.in/api/albums/ALBUM_ID/photos \
 
 ### Share a Photo
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/share/photo/PHOTO_ID \
+curl -X POST https://PhotoFlow.in/api/share/photo/PHOTO_ID \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{
@@ -153,7 +153,7 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/share/photo/PHOTO_ID \
 
 ### Share an Album
 ```bash
-curl -X POST https://PhotoFlow.sonomainfotech.in/api/share/album/ALBUM_ID \
+curl -X POST https://PhotoFlow.in/api/share/album/ALBUM_ID \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $TOKEN" \
   -d '{
@@ -163,18 +163,18 @@ curl -X POST https://PhotoFlow.sonomainfotech.in/api/share/album/ALBUM_ID \
 
 ### Access Shared Resource (Public - No Auth)
 ```bash
-curl -X GET https://PhotoFlow.sonomainfotech.in/api/share/SHARE_TOKEN
+curl -X GET https://PhotoFlow.in/api/share/SHARE_TOKEN
 ```
 
 ### Get All My Shared Links
 ```bash
-curl -X GET https://PhotoFlow.sonomainfotech.in/api/share \
+curl -X GET https://PhotoFlow.in/api/share \
   -H "Authorization: Bearer $TOKEN"
 ```
 
 ### Delete Shared Link
 ```bash
-curl -X DELETE https://PhotoFlow.sonomainfotech.in/api/share/LINK_ID \
+curl -X DELETE https://PhotoFlow.in/api/share/LINK_ID \
   -H "Authorization: Bearer $TOKEN"
 ```
 
@@ -219,12 +219,12 @@ The mock AI service generates tags from these categories:
 1. **Register & Login**
    ```bash
    # Register
-   curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/register \
+   curl -X POST https://PhotoFlow.in/api/auth/register \
      -H "Content-Type: application/json" \
      -d '{"name":"Jane","email":"jane@test.com","password":"pass1234"}'
    
    # Login (save the token)
-   curl -X POST https://PhotoFlow.sonomainfotech.in/api/auth/login \
+   curl -X POST https://PhotoFlow.in/api/auth/login \
      -H "Content-Type: application/json" \
      -d '{"email":"jane@test.com","password":"pass1234"}'
    ```
@@ -233,7 +233,7 @@ The mock AI service generates tags from these categories:
    ```bash
    TOKEN="eyJhbGc..."  # From login response
    
-   curl -X POST https://PhotoFlow.sonomainfotech.in/api/photos/upload \
+   curl -X POST https://PhotoFlow.in/api/photos/upload \
      -H "Authorization: Bearer $TOKEN" \
      -F "file=@sunset.jpg"
    
@@ -242,7 +242,7 @@ The mock AI service generates tags from these categories:
 
 3. **Create Smart Album**
    ```bash
-   curl -X POST https://PhotoFlow.sonomainfotech.in/api/albums \
+   curl -X POST https://PhotoFlow.in/api/albums \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer $TOKEN" \
      -d '{"title":"Sunsets","isSmart":true,"tagRules":["sunset","golden-hour"]}'
@@ -250,7 +250,7 @@ The mock AI service generates tags from these categories:
 
 4. **Share Album**
    ```bash
-   curl -X POST https://PhotoFlow.sonomainfotech.in/api/share/album/ALBUM_ID \
+   curl -X POST https://PhotoFlow.in/api/share/album/ALBUM_ID \
      -H "Content-Type: application/json" \
      -H "Authorization: Bearer $TOKEN" \
      -d '{"expiresInDays":30}'
@@ -260,7 +260,7 @@ The mock AI service generates tags from these categories:
 
 5. **Access Shared Album (No Auth)**
    ```bash
-   curl -X GET https://PhotoFlow.sonomainfotech.in/api/share/SHARE_TOKEN
+   curl -X GET https://PhotoFlow.in/api/share/SHARE_TOKEN
    ```
 
 ---

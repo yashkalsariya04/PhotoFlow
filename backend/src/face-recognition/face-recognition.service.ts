@@ -8,7 +8,6 @@ import * as tf from '@tensorflow/tfjs';
 import * as https from 'https';
 import { createWriteStream } from 'fs';
 
-
 // Try to load canvas with a fallback
 let Canvas: any, Image: any, ImageData: any, loadImage: any;
 let isCanvasAvailable = false;
@@ -29,8 +28,6 @@ try {
   loadImage = async () => { throw new Error('Canvas not available'); };
   isCanvasAvailable = false;
 }
-
-
 
 @Injectable()
 export class FaceRecognitionService {

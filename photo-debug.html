@@ -106,11 +106,11 @@
             
             try {
                 // Check backend
-                const backendResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api');
+                const backendResponse = await fetch('https://PhotoFlow.in/api');
                 const backendStatus = backendResponse.ok ? '✅ Backend Online' : '❌ Backend Offline';
                 
                 // Check database connection
-                const eventsResponse = await fetch('https://PhotoFlow.sonomainfotech.in/api/events');
+                const eventsResponse = await fetch('https://PhotoFlow.in/api/events');
                 const dbStatus = eventsResponse.ok ? '✅ Database Connected' : '❌ Database Error';
                 
                 statusDiv.className = 'status success';
@@ -128,7 +128,7 @@
             
             try {
                 // Create test event and upload photo
-                const response = await fetch('https://PhotoFlow.sonomainfotech.in/api/events/access/JXPYWF5D/recognize', {
+                const response = await fetch('https://PhotoFlow.in/api/events/access/JXPYWF5D/recognize', {
                     method: 'POST',
                     body: new FormData() // Empty form for testing
                 });
@@ -173,7 +173,7 @@
             
             try {
                 // Get client photos
-                const response = await fetch(`https://PhotoFlow.sonomainfotech.in/api/events/client/${currentClientId}`);
+                const response = await fetch(`https://PhotoFlow.in/api/events/client/${currentClientId}`);
                 
                 if (response.ok) {
                     const data = await response.json();
@@ -209,8 +209,8 @@
             let html = '<div class="photo-grid">';
             
             photos.forEach((photo, index) => {
-                const thumbnailUrl = `https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}/thumbnail/public`;
-                const photoUrl = `https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}`;
+                const thumbnailUrl = `https://PhotoFlow.in/api/photos/${photo._id}/thumbnail/public`;
+                const photoUrl = `https://PhotoFlow.in/api/photos/${photo._id}`;
                 
                 html += `
                     <div class="photo-card">
@@ -238,8 +238,8 @@
             let html = '<h3>🔗 Direct Photo Links</h3>';
             
             photos.forEach((photo, index) => {
-                const thumbnailUrl = `https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}/thumbnail/public`;
-                const photoUrl = `https://PhotoFlow.sonomainfotech.in/api/photos/${photo._id}`;
+                const thumbnailUrl = `https://PhotoFlow.in/api/photos/${photo._id}/thumbnail/public`;
+                const photoUrl = `https://PhotoFlow.in/api/photos/${photo._id}`;
                 
                 html += `
                     <div class="debug-info">

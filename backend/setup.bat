@@ -74,7 +74,7 @@ echo To start the development server, run:
 echo   npm run start:dev
 echo.
 echo The server will be available at:
-echo   https://PhotoFlow.sonomainfotech.in/api
+echo   https://PhotoFlow.in/api
 echo.
 echo To stop MongoDB:
 echo   docker-compose down
