@@ -377,6 +377,51 @@ Environment variables required:
 - `MONGODB_URI`: Production MongoDB connection string
 - `JWT_SECRET`: Strong secret key for production
 
+
+Backend .env file
+Application
+NODE_ENV=development
+PORT=3000
+
+Database
+MONGODB_URI=mongodb://localhost:27017/lumina-studio
+
+JWT
+JWT_SECRET=your-secret-key-change-this-in-production
+JWT_EXPIRES_IN=7d
+
+File Upload
+UPLOAD_DIR=./uploads
+MAX_FILE_SIZE=52428800
+STORAGE_LIMIT_GB=10
+MODELS_PATH=./models
+
+SMTP / Email (for sending new user passwords)
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=@gmail.com
+SMTP_PASS= app password
+SMTP_FROM=@gmail.com
+
+GEMINI_API_KEY=AIzaSyAtCUvt1HHGpdnZ-EFiTn3tSrHxIgnkRuA
+HUGGINGFACE_API_KEY=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
+REPLICATE_API_KEY=r8_FHBRIQYzbLPtvr0FgGWJXYphCknRqcY1eAJKA
+
+Frontend .env file
+API Configuration
+VITE_API_URL=https://photoflow.sonomainfotech.in/api
+
+Application
+VITE_APP_NAME=PhotoFlow
+VITE_APP_URL=https://photoflow.sonomainfotech.in
+
+API Configuration
+VITE_API_URL=http://localhost:3000/api
+
+Application
+VITE_APP_NAME=Lumina Studio
+VITE_APP_URL=http://localhost:5173
+
 ## 📈 Future Enhancements
 
 - [ ] Real ML facial recognition integration
